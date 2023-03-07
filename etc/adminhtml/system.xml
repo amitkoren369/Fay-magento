@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="fay_api" translate="label" sortOrder="400">
+            <label>Fay greetings</label>
+        </tab>
+        <section id="fay" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>API configurations</label>
+            <tab>fay_api</tab>
+            <resource>Fay_Api::config_section</resource>
+            <group id="api" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>API Config</label>
+                <field id="contact_info" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <frontend_model>Fay\Api\Block\Adminhtml\System\Config\Contact</frontend_model>
+                </field>
+                <field id="is_enabled" translate="label" type="select" showInDefault="1" canRestore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="api_key" translate="label" type="obscure" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>API key</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                    <comment>Provided by Fay greetings</comment>
+                    <tooltip>Don't have one? Contact us and we will provide it to you.</tooltip>
+                </field>
+                <field id="api_endpoint" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>API Endpoint</label>
+                    <tooltip>Don't have one? Contact us and we will provide it to you.</tooltip>
+                    <comment>Provided by Fay greetings</comment>
+                </field>
+                <field id="store_id" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Store ID</label>
+                    <tooltip>Don't have one? Contact us and we will provide it to you.</tooltip>
+                    <comment>Provided by Fay greetings</comment>
+                </field>
+                <field id="external_order_info" translate="label" type="multiselect" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Additional attributes</label>
+                    <comment>Selected will be included in to API request</comment>
+                    <source_model>Fay\Api\Model\Config\Source\AdditionalAttributes</source_model>
+                    <tooltip>You can select more than one by CTRL + mouse click</tooltip>
+                </field>
+                <field id="target_product_sku" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Product SKU</label>
+                    <comment>Put here an SKU what should trigger API call</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
