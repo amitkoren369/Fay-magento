@@ -53,7 +53,7 @@ class Data extends AbstractHelper
     {
         return [
             'store_id' => $this->config->getStoreId(),
-            'buyer_phone' => $order->getShippingAddress()->getTelephone(),
+            'buyer_phone' => $order->getBillingAddress()->getTelephone(),
             'order_id' => $order->getIncrementId(),
             'order_info' => $this->getExternalOrderInfo($order),
             'buyer_name' => $order->getCustomerFirstname() . ' ' . $order->getCustomerLastname(),
