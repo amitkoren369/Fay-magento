@@ -14,7 +14,8 @@ class Config extends AbstractHelper
     protected const XML_PATH_API_ENDPOINT = 'fay/api/api_endpoint';
     protected const XML_PATH_STORE_ID = 'fay/api/store_id';
     protected const XML_PATH_ADDITIONAL_DATA = 'fay/api/external_order_info';
-    protected EncryptorInterface $encryptor;
+    /** @var EncryptorInterface */
+    protected $encryptor;
 
     public function __construct(Context $context, EncryptorInterface $encryptor)
     {

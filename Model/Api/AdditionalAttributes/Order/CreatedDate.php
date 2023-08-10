@@ -6,8 +6,8 @@ use Fay\Api\Model\Api\AdditionalAttributes\Attribute;
 
 class CreatedDate extends Attribute
 {
-   public function getValue() : string
-   {
-       return $this->order->getCreatedAt();
-   }
+    public function getValue() : string
+    {
+        return $this->order->getCreatedAt();
+    }
 }

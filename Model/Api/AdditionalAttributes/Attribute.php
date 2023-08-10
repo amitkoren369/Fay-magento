@@ -6,7 +6,8 @@ use Magento\Sales\Model\Order;
 
 abstract class Attribute
 {
-    protected Order $order;
+    /** @var Order */
+    protected $order;
 
     public function setOrder(Order $order) : Attribute
     {

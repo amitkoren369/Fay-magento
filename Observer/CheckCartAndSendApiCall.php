@@ -11,9 +11,12 @@ use Fay\Api\Model\Api;
 
 class CheckCartAndSendApiCall implements ObserverInterface
 {
-    protected Logger $logger;
-    protected Data $helper;
-    protected Api $api;
+    /** @var Logger */
+    protected $logger;
+    /** @var Data */
+    protected $helper;
+    /** @var Api */
+    protected $api;
 
     public function __construct(
         Logger $logger,

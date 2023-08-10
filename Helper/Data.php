@@ -10,9 +10,12 @@ use Magento\Framework\Serialize\Serializer\Json;
 
 class Data extends AbstractHelper
 {
-    protected Config $config;
-    protected Json $json;
-    protected Factory $attributeFactory;
+    /** @var Config */
+    protected $config;
+    /** @var Json */
+    protected $json;
+    /** @var Factory */
+    protected $attributeFactory;
 
     public function __construct(Context $context, Config $config, Json $json, Factory $attributeFactory)
     {
@@ -64,7 +67,7 @@ class Data extends AbstractHelper
     {
         $data = [];
         $attributes = $this->config->getAdditionalAttributes();
-        if (!empty($attributes))  {
+        if (!empty($attributes)) {
             foreach ($attributes as $attributeCode) {
                 $data[$attributeCode] = $this->attributeFactory->getAttributeModel($attributeCode)->setOrder($order)->getValue();
             }

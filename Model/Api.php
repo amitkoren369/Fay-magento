@@ -8,9 +8,12 @@ use Magento\Framework\Serialize\Serializer\Json;
 
 class Api
 {
-    protected Config $config;
-    protected Logger $logger;
-    protected Json $json;
+    /** @var Config */
+    protected $config;
+    /** @var Logger */
+    protected $logger;
+    /** @var Json */
+    protected $json;
     protected const API_HOST = 'https://api.faythefary.io';
 
     public function __construct(Config $config, Logger $logger, Json $json)

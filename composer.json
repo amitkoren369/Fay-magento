@@ -1,33 +1,32 @@
 {
-    "name": "amitkoren369/fay-magento",
-    "description": "Integration of Fay greetings Api",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Konstantin Dunaev",
-            "email": "dk@codedrop.cc",
-            "homepage": "https://codedrop.cc/",
-            "role": "Developer"
-        }
-    ],
-    "type": "magento2-module",
-    "version": "0.0.3",
-    "config": {
-        "sort-packages": true
-    },
-    "autoload": {
-        "files": [
-            "registration.php"
-        ],
-        "psr-4": {
-            "Fay\\Api\\": ""
-        }
-    },
-    "require": {
-        "php": "^7.4|^8.1",
-        "magento/product-community-edition": "^2.4.0"
-    },
-    "require-dev": {
-        "roave/security-advisories": "dev-latest"
+  "name": "amitkoren369/fay-magento",
+  "description": "Integration of Fay greetings Api",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Konstantin Dunaev",
+      "email": "dk@codedrop.cc",
+      "homepage": "https://codedrop.cc/",
+      "role": "Developer"
     }
+  ],
+  "type": "magento2-module",
+  "version": "0.0.4",
+  "config": {
+    "sort-packages": true
+  },
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Fay\\Api\\": ""
+    }
+  },
+  "require": {
+    "php": "^7.2|^8.1"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest"
+  }
 }

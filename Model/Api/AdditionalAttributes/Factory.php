@@ -9,7 +9,8 @@ use Fay\Api\Model\Api\AdditionalAttributes\Order\ShippingMethod;
 
 class Factory
 {
-    protected array $attributes = [];
+    /** @var array */
+    protected $attributes = [];
 
     public function __construct(
         CreatedDate $createdDate,

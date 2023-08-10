@@ -7,7 +7,8 @@ use Magento\Directory\Model\CountryFactory;
 
 class ShippingAddress extends Attribute
 {
-    protected CountryFactory $countryFactory;
+    /** @var CountryFactory */
+    protected $countryFactory;
 
     public function __construct(CountryFactory $countryFactory)
     {
